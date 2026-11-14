@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Barrio Market | Compras</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="compras.js" defer></script>
+    <script src="sesion.js" defer></script>
+</head>
+<body class="pagina-ventas">
+    <!-- ENCABEZADO -->
+    <header class="encabezado-ventas">
+        <div>
+            <h1>Mi Barrio Market</h1>
+            <p>Registro de compras</p>
+        </div>
+        <button
+            type="button"
+            id="btn-cerrar-sesion"
+            class="boton-cerrar-sesion"
+        >
+    Cerrar sesión
+</button>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido-ventas">
+        <!-- DATOS DE LA COMPRA -->
+        <section class="panel-ventas">
+            <h2>Datos de compra</h2>
+            <label for="reponedor-compra">Reponedor</label>
+            <select id="reponedor-compra">
+                <option value="">Cargando reponedores...</option>
+            </select>
+            <label for="proveedor-compra">Proveedor</label>
+            <select id="proveedor-compra">
+                <option value="">Cargando proveedores...</option>
+            </select>
+            <label for="categoria-compra">Categoría</label>
+            <select id="categoria-compra">
+                <option value="">Cargando categorías...</option>
+            </select>
+            <label for="producto-compra">Producto</label>
+            <select id="producto-compra" disabled>
+                <option value="">Selecciona una categoría primero</option>
+            </select>
+            <label for="cantidad-compra">Cantidad</label>
+            <input
+                type="number"
+                id="cantidad-compra"
+                min="1"
+                step="1"
+                value="1"
+            >
+            <label for="costo-compra">Costo unitario (S/)</label>
+            <input
+                type="number"
+                id="costo-compra"
+                min="0.01"
+                step="0.01"
+                placeholder="Ejemplo: 3.50"
+            >
+            <button
+                type="button"
+                id="btn-agregar-producto-compra"
+                class="boton-agregar-producto"
+            >
+                Agregar producto
+            </button>
+            <p id="mensaje-compra" role="status"></p>
+        </section>
+        <!-- DETALLE DE LA COMPRA -->
+        <section class="panel-ventas">
+            <h2>Detalle de compra</h2>
+            <p class="texto-secundario">
+                Productos agregados
+            </p>
+            <div id="carrito-compra" class="carrito-venta">
+                <p class="carrito-vacio">
+                    Todavía no hay productos agregados.
+                </p>
+            </div>
+            <!-- RESUMEN -->
+            <div class="resumen-venta">
+                <div>
+                    <span>Total de unidades:</span>
+                    <strong id="cantidad-unidades-compra">0</strong>
+                </div>
+                <div class="total-venta">
+                    <span>TOTAL:</span>
+                    <strong id="total-compra">S/ 0.00</strong>
+                </div>
+            </div>
+            <button
+                type="button"
+                id="btn-registrar-compra"
+                class="boton-finalizar-venta"
+                disabled
+            >
+                Registrar compra
+            </button>
+            <p id="mensaje-registro-compra" role="status"></p>
+        </section>
+    </main>
+</body>
+</html>

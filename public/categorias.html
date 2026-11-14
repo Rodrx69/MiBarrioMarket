@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Barrio Market | Categorías</title>
+    <!-- Conectar los estilos generales -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Cargar la lógica de las categorías -->
+    <script src="categorias.js" defer></script>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <main class="contenedor-categorias">
+        <section class="tarjeta-categorias">
+            <h1>Mi Barrio Market</h1>
+            <p class="subtitulo">
+                Consulta de categorías de productos
+            </p>
+            <!-- Lista desplegable de categorías -->
+            <label for="categoria">
+                Selecciona una categoría
+            </label>
+            <select id="categoria">
+                <option value="">Cargando categorías...</option>
+            </select>
+            <!-- Aquí aparecerá la descripción -->
+            <div id="detalle-categoria">
+                <p>Selecciona una categoría para ver su descripción.</p>
+            </div>
+            <!-- Seccion donde apareceran los productos -->
+            <section class="seccion-productos">
+                <h2>Productos de la categoría</h2>
+                <!-- Aqui JavaScript mostrara los productos -->
+                <div id="listado-productos" class="lista-productos">
+                    <p>Selecciona una categoría para ver sus productos.</p>
+                </div>
+            </section>
+            <!-- Mensajes del sistema -->
+            <p id="mensaje-categorias" role="status"></p>
+        </section>
+    </main>
+</body>
+</html>

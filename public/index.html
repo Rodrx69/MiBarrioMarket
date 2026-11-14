@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Barrio Market | Inicio de sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="inicio.js" defer></script>
+</head>
+<body>
+    <!-- Contenedor que centra el formulario en la pantalla -->
+    <main class="contenedor-principal">
+        <!-- Tarjeta principal del inicio de sesión -->
+        <section class="tarjeta-acceso">
+            <!-- Identificador visual del negocio -->
+            <div class="logotipo">MB</div>
+            <!-- Nombre y descripción del sistema -->
+            <h1>Mi Barrio Market</h1>
+            <p class="subtitulo">
+                Sistema de ventas e inventario
+            </p>
+            <!-- Formulario para ingresar al sistema -->
+            <form id="formulario-acceso">
+                <!-- Campo para escribir el nombre de usuario -->
+                <label for="nombre-usuario">
+                    Nombre de usuario
+                </label>
+                <input
+                    type="text"
+                    id="nombre-usuario"
+                    name="nombre-usuario"
+                    placeholder="Ingresa tu usuario"
+                    autocomplete="username"
+                    required
+                >
+                <!-- Campo para escribir la contraseña -->
+                <label for="contrasena">
+                    Contraseña
+                </label>
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="contrasena"
+                    placeholder="Ingresa tu contraseña"
+                    autocomplete="current-password"
+                    required
+                >
+                <!-- Botón para enviar el formulario -->
+                <button type="submit">
+                    Ingresar al sistema
+                </button>
+                <!-- Espacio para mostrar mensajes al usuario -->
+                <p id="mensaje" role="status" aria-live="polite"></p>
+            </form>
+            <!-- Aviso informativo al pie del formulario -->
+            <p class="nota">
+                Acceso exclusivo para personal autorizado
+            </p>
+        </section>
+    </main>
+</body>
+</html>

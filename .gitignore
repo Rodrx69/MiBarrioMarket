@@ -1,0 +1,5 @@
+# Evitar compartir las credenciales privadas
+.env
+
+# No incluir las herramientas instaladas
+node_modules/

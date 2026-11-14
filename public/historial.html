@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Barrio Market | Historial de ventas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="historial.js" defer></script>
+</head>
+
+<body class="pagina-historial">
+    <!-- ENCABEZADO PRINCIPAL -->
+    <header class="encabezado-historial">
+        <div>
+            <h1>Mi Barrio Market</h1>
+            <p>Historial de ventas</p>
+        </div>
+        <a href="ventas.html" class="enlace-ventas">
+            Volver a ventas
+        </a>
+    </header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenido-historial">
+        <section class="panel-historial">
+            <div class="cabecera-historial">
+                <div>
+                    <h2>Ventas registradas</h2>
+                    <p>Consulta las operaciones realizadas.</p>
+                </div>
+                <button type="button" id="btn-actualizar">
+                    Actualizar
+                </button>
+            </div>
+            <!-- BUSCADOR -->
+            <div class="buscador-historial">
+                <label for="buscar-venta">
+                    Buscar venta
+                </label>
+                <input
+                    type="text"
+                    id="buscar-venta"
+                    placeholder="Buscar por número, DNI o cliente..."
+                >
+                <p id="contador-ventas">
+                    Cargando ventas...
+                </p>
+            </div>
+            <p id="mensaje-historial" role="status"></p>
+            <!-- TABLA DE VENTAS -->
+            <div class="tabla-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N.º Venta</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>DNI</th>
+                            <th>Caja</th>
+                            <th>Comprobante</th>
+                            <th>Unidades</th>
+                            <th>Total</th>
+                            <th>Forma de pago</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-ventas">
+                        <tr>
+                            <td colspan="10">
+                                Cargando historial de ventas...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================= -->
+    <!-- VENTANA EMERGENTE DEL DETALLE DE VENTA -->
+    <!-- ========================================= -->
+
+    <dialog id="modal-detalle-venta" class="modal-detalle-venta">
+        <div class="contenido-modal-detalle">
+            <!-- CABECERA DEL MODAL -->
+            <div class="cabecera-modal-detalle">
+                <div>
+                    <p class="subtitulo-modal">
+                        Consulta de operación
+                    </p>
+                    <h2 id="titulo-modal-detalle">
+                        Detalle de venta
+                    </h2>
+                </div>
+                <button
+                    type="button"
+                    id="btn-cerrar-detalle"
+                    class="boton-cerrar-modal"
+                    aria-label="Cerrar ventana"
+                >
+                    &times;
+                </button>
+            </div>
+            <!-- INFORMACION QUE SE CARGARA DESDE SQL SERVER -->
+            <div
+                id="contenido-detalle-venta"
+                aria-live="polite"
+            >
+                <p>Selecciona una venta para consultar su detalle.</p>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>
